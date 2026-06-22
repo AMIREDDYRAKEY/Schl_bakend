@@ -50,10 +50,7 @@ const studentSchema = new mongoose.Schema(
       type: String,
       default: "Pending",
     },
-    photo: {
-  type: String,
-  default: "",
-},
+    
   },
   {
     timestamps: true,

@@ -15,6 +15,7 @@ const router = express.Router();
 router.route("/")
   .get( getStudents)
   .post(
+  protect,
   upload.single("photo"),
   createStudent
 );

@@ -34,10 +34,7 @@ app.use("/api/notifications",notificationRoutes);
 app.use("/api/dashboard",dashboardRoutes);
 app.use("/api/parent",parentRoutes);
 
-app.use(
-  "/uploads",
-  express.static("uploads")
-);
+
 app.get("/", (req, res) => {
   res.json({
     success: true,

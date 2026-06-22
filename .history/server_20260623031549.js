@@ -11,7 +11,7 @@ import notificationRoutes from "./routes/admin/notificationRoutes.js";
 
 import dashboardRoutes from "./routes/admin/dashboardRoutes.js";
 import parentRoutes from "./routes/admin/parentRoutes.js";
-import path from "path";
+
 import connectDB from "./config/db.js";
 
 dotenv.config();
@@ -34,10 +34,7 @@ app.use("/api/notifications",notificationRoutes);
 app.use("/api/dashboard",dashboardRoutes);
 app.use("/api/parent",parentRoutes);
 
-app.use(
-  "/uploads",
-  express.static("uploads")
-);
+
 app.get("/", (req, res) => {
   res.json({
     success: true,
