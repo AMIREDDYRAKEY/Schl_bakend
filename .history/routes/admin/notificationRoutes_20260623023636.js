@@ -17,13 +17,13 @@ router.route("/")
     getNotifications
   )
   .post(
-    
+    protect,
     createNotification
   );
 
 router.route("/:id")
   .delete(
-    
+    protect,
     deleteNotification
   );
 

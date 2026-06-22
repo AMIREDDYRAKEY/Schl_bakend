@@ -26,12 +26,13 @@ router.get(
 
 router.get(
   "/today",
+  protect,
   getTodayAttendance
 );
 
 router.get(
   "/student/:id",
-  
+  protect,
   getStudentAttendance
 );
 

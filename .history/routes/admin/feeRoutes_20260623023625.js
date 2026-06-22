@@ -24,7 +24,7 @@ router.get(
 
 router.get(
   "/receipt/:id",
-  
+  protect,
   getReceipt
 );
 

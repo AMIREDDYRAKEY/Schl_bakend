@@ -13,18 +13,19 @@ const router =
   express.Router();
 
 router.route("/")
-  .get( getResults)
+  .get(pr getResults)
   .post(
-    
+    protect,
     createResult
   );
 
 router.route("/:id")
   .put(
-    
+    protect,
     updateResult
   )
   .delete(
+    protect,
     deleteResult
   );
 

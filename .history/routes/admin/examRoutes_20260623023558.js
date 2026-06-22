@@ -17,9 +17,9 @@ router.route("/")
   .post( createExam);
 
 router.route("/:id")
-  .put( updateExam)
+  .put(protect, updateExam)
   .delete(
-    
+    protect,
     deleteExam
   );
 

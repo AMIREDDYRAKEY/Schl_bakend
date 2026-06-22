@@ -11,7 +11,7 @@ const router =
 
 router.get(
   "/stats",
-  
+  pr
   getDashboardStats
 );
 

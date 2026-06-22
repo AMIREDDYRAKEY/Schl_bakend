@@ -20,18 +20,19 @@ router.post(
 
 router.get(
   "/all",
-  
+  protect,
   getAttendance
 );
 
 router.get(
   "/today",
+  protect,
   getTodayAttendance
 );
 
 router.get(
   "/student/:id",
-  
+  protect,
   getStudentAttendance
 );
 

@@ -3,24 +3,28 @@ import express from "express";
 import protect from "../../middilewares/authMiddleware.js";
 
 import {
-  getExams,
-  createExam,
-  updateExam,
-  deleteExam,
-} from "../../controllers/admin/examController.js";
+  getTimetable,
+  createTimetable,
+  deleteTimetable,
+} from "../../controllers/admin/timetableController.js";
 
 const router =
   express.Router();
 
 router.route("/")
-  .get( getExams)
-  .post( createExam);
+  .get(
+    
+    getTimetable
+  )
+  .post(
+    
+    createTimetable
+  );
 
 router.route("/:id")
-  .put( updateExam)
   .delete(
-    
-    deleteExam
+    protect,
+    deleteTimetable
   );
 
 export default router;

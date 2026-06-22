@@ -19,7 +19,7 @@ router.route("/")
 router.route("/:id")
   .put( updateExam)
   .delete(
-    
+    protect,
     deleteExam
   );
 

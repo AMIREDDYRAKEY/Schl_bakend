@@ -25,6 +25,7 @@ router.route("/:id")
     updateResult
   )
   .delete(
+    protect,
     deleteResult
   );
 

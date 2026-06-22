@@ -18,7 +18,7 @@ router.route("/")
 
 router.route("/:id")
   .get( getStudentById)
-  .put( updateStudent)
-  .delete(deleteStudent);
+  .put(protect, updateStudent)
+  .delete(protect, deleteStudent);
 
 export default router;

@@ -14,11 +14,11 @@ const router = express.Router();
 
 router.route("/")
   .get( getStudents)
-  .post( createStudent);
+  .post(protec createStudent);
 
 router.route("/:id")
-  .get( getStudentById)
-  .put( updateStudent)
-  .delete(deleteStudent);
+  .get(protect, getStudentById)
+  .put(protect, updateStudent)
+  .delete(protect, deleteStudent);
 
 export default router;

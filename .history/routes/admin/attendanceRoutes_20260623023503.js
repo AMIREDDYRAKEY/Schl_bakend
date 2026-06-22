@@ -31,7 +31,7 @@ router.get(
 
 router.get(
   "/student/:id",
-  
+  protect,
   getStudentAttendance
 );
 

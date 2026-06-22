@@ -14,12 +14,12 @@ const router =
 
 router.route("/")
   .get( getExams)
-  .post( createExam);
+  .post(protect, createExam);
 
 router.route("/:id")
-  .put( updateExam)
+  .put(protect, updateExam)
   .delete(
-    
+    protect,
     deleteExam
   );
 

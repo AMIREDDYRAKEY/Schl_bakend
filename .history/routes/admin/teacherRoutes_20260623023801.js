@@ -3,29 +3,30 @@ import express from "express";
 import protect from "../../middilewares/authMiddleware.js";
 
 import {
-  getResults,
-  createResult,
-  updateResult,
-  deleteResult,
-} from "../../controllers/admin/resultController.js";
+  getTeachers,
+  createTeacher,
+  updateTeacher,
+  deleteTeacher,
+} from "../../controllers/admin/teacherController.js";
 
 const router =
   express.Router();
 
 router.route("/")
-  .get( getResults)
+  .get( getTeachers)
   .post(
-    
-    createResult
+    protect,
+    createTeacher
   );
 
 router.route("/:id")
   .put(
-    
-    updateResult
+    protect,
+    updateTeacher
   )
   .delete(
-    deleteResult
+    protect,
+    deleteTeacher
   );
 
 export default router;

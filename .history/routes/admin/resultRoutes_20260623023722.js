@@ -21,10 +21,11 @@ router.route("/")
 
 router.route("/:id")
   .put(
-    
+    protect,
     updateResult
   )
   .delete(
+    protect,
     deleteResult
   );
 

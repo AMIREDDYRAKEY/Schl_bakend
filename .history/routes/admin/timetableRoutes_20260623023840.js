@@ -3,29 +3,28 @@ import express from "express";
 import protect from "../../middilewares/authMiddleware.js";
 
 import {
-  getResults,
-  createResult,
-  updateResult,
-  deleteResult,
-} from "../../controllers/admin/resultController.js";
+  getTimetable,
+  createTimetable,
+  deleteTimetable,
+} from "../../controllers/admin/timetableController.js";
 
 const router =
   express.Router();
 
 router.route("/")
-  .get( getResults)
-  .post(
+  .get(
     
-    createResult
+    getTimetable
+  )
+  .post(
+    protect,
+    createTimetable
   );
 
 router.route("/:id")
-  .put(
-    
-    updateResult
-  )
   .delete(
-    deleteResult
+    protect,
+    deleteTimetable
   );
 
 export default router;

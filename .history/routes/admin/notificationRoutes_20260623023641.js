@@ -3,29 +3,28 @@ import express from "express";
 import protect from "../../middilewares/authMiddleware.js";
 
 import {
-  getResults,
-  createResult,
-  updateResult,
-  deleteResult,
-} from "../../controllers/admin/resultController.js";
+  getNotifications,
+  createNotification,
+  deleteNotification,
+} from "../../controllers/admin/notificationController.js";
 
 const router =
   express.Router();
 
 router.route("/")
-  .get( getResults)
+  .get(
+    
+    getNotifications
+  )
   .post(
     
-    createResult
+    createNotification
   );
 
 router.route("/:id")
-  .put(
-    
-    updateResult
-  )
   .delete(
-    deleteResult
+    protect,
+    deleteNotification
   );
 
 export default router;

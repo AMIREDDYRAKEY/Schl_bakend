@@ -15,16 +15,17 @@ const router =
 router.route("/")
   .get( getResults)
   .post(
-    
+    protect,
     createResult
   );
 
 router.route("/:id")
   .put(
-    
+    protect,
     updateResult
   )
   .delete(
+    protect,
     deleteResult
   );
 
